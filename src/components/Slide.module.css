@@ -1,0 +1,44 @@
+.slide {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin-block: 50px;
+    gap: 10px;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    display: none;
+    &[visible="true"] {
+        display: flex;
+
+        &[side="left"] {
+            animation: var(--show-left);
+        }
+
+        &[side="right"] {
+            animation: var(--show-right);
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    button {
+        padding: 5px;
+        border-radius: 50%;
+        border: solid 2px black;
+        --back: black;
+
+        &[selected] {
+            background-color: black;
+        }
+    }
+}
